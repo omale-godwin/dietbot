@@ -1,0 +1,89 @@
+session_config:
+  session_expiration_time: 900
+  carry_over_slots_to_new_session: true
+intents:
+  - symtoms
+  - greet
+  - diabetis
+  - causes
+  - treatment
+  - type_2_daibetis
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+responses:
+  utter_greet:
+    - buttons:
+        - payload: /Hypertitis
+          title: Hypertitis
+        - payload: /diabetis
+          title: diabetis
+        - payload: /Ulcer
+          title: Ulcer
+      text:
+        "Hey! How are you? \n Welcome to Dietary expert system \n which expert information\
+        \ system do you want to utilized today"
+  utter_diabetis:
+    - buttons:
+        - payload: /treatment
+          title: Treatment
+        - payload: /symtoms
+          title: symtoms
+        - payload: /causes
+          title: Causes
+      text:
+        "Diabetes is a disease that occurs when your blood glucose, also called\
+        \ blood sugar, is too high. \n Most of the food you eat is broken down into\
+        \ sugar (also called glucose) and released into your bloodstream. When your\
+        \ blood sugar goes up, it signals your pancreas to release insulin.  \n \n \b\
+        \ \n \n Get more information Below"
+  utter_symtoms:
+    - buttons:
+        - payload: /General_symptoms
+          title: General symptoms
+        - payload: /Symptoms_in_men
+          title: Symptoms in men
+        - payload: /Symptoms_in_women
+          title: Symptoms in women
+        - payload: /Type_2_diabetes
+          title: Type 2 diabetes
+        - payload: /Type_1_diabetes
+          title: Type 1 diabetes
+        - payload: /Gestational_diabetes
+          title: Gestational diabetes
+      text: "Diabetes symptoms are caused by rising blood sugar. \n "
+  utter_causes:
+    - buttons:
+        - payload: /type_2_daibetis
+          title: causes of Type 2 diabetes
+        - payload: /causes_of_Type_1_diabetes
+          title: causes of Type 1 diabetes
+        - payload: /Gestational_diabetes_causes
+          title: causes of Gestational diabetes
+      text: "Different causes are associated with each type of diabetes. \n"
+  utter_treatment:
+    - buttons:
+        - payload: /physical_exercise
+          title: physical exercise
+        - payload: /Nutritional_diet_for_Diabites
+          title: Nutritional diet
+        - payload: /diagnostic
+          title: diagnostic recommendation
+      text:
+        Doctors treat diabetes with a few different medications. Some of these drugs
+        are taken by mouth, while others are available as injections.
+  utter_cheer_up:
+    - image: https://i.imgur.com/nGF1K8f.jpg
+      text: "Here is something to cheer you up:"
+  utter_did_that_help:
+    - text: Did that help you?
+  utter_happy:
+    - text: Great, carry on!
+  utter_goodbye:
+    - text: Bye
+  utter_iamabot:
+    - text: I am a bot, powered by Rasa.
